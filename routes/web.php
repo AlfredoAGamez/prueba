@@ -15,17 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/contacto', function() {
-    return "hola desde contacto";
-});
+
+Route::view('/home', 'home')->name('home');
+Route::view('/about', 'about')->name('about');
+Route::view('/portafolio', 'portafolio')->name('portafolio');
+Route::view('/contact', 'contact')->name('contact');
 
 
-Route::get('/', function () {
-     echo "<a href='contacto'>contacto 1</a><br>";
-     echo "<a href='contacto'>contacto 2</a><br>";
-     echo "<a href='contacto'>contacto 3</a><br>";
-     echo "<a href='contacto'>contacto 4</a><br>";
-     echo "<a href='contacto'>contacto 5</a><br>";
-});
+/*Route::get('/', function () {
 
+    $nombre= "Jorge";
+    
+    return view('home', compact('nombre'));
 
+})->name('home');
+
+*/
